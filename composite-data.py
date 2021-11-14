@@ -16,7 +16,7 @@ for key, value in myVehicle.items():
     
 myInventoryList = []
 
-with open('car_fleet.csv') as csvFile:
+with open('/home/ec2-user/environment/aws_restart/car_fleet.csv') as csvFile:
     csvReader = csv.reader(csvFile, delimiter=',')  
     lineCount = 0  
     for row in csvReader:
