@@ -1,4 +1,4 @@
-# Module Lab: Caesar Cipher Program Bug #2
+# Module Lab: Caesar Cipher Program Bug #4
 #
 # In a previous lab, you created a Caesar cipher program. This version of
 # the program is buggy. Use a debugger to find the bug and fix it.
@@ -15,9 +15,6 @@ def getMessage():
 
 # Get a cipher key
 def getCipherKey():
-
-
-
     shiftAmount = input("Please enter a key (whole number from 1-25): ")
     return shiftAmount
 
@@ -25,7 +22,7 @@ def getCipherKey():
 def encryptMessage(message, cipherKey, alphabet):
     encryptedMessage = ""
     uppercaseMessage = ""
-    uppercaseMessage = message
+    uppercaseMessage = message.upper()
     for currentCharacter in uppercaseMessage:
         position = alphabet.find(currentCharacter)
         newPosition = position + int(cipherKey)
@@ -53,7 +50,7 @@ def runCaesarCipherProgram():
     myEncryptedMessage = encryptMessage(myMessage, myCipherKey, myAlphabet2)
     print(f'Encrypted Message: {myEncryptedMessage}')
     myDecryptedMessage = decryptMessage(myEncryptedMessage, myCipherKey, myAlphabet2)
-    print(f'Decrypted Message: {myDecryptedMessage}')
+    print(f'Decrypted Message: {myEncryptedMessage}')
 
 # Main logic
 runCaesarCipherProgram()
